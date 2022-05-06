@@ -2,8 +2,8 @@
 #include "Duke.hpp"
 #include "Player.hpp"
 #include "Game.hpp"
-
-  Duke::Duke(coup::Game& g,string s)
+using namespace coup;
+  Duke::Duke(Game& g,string s)
   {
      this->setName(s);
      this->setcoins(0);

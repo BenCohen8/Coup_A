@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Player.hpp"
-class Player;
+using namespace coup;
 class Ambassador:public Player
 {
     
   public:
-    Ambassador(coup::Game& ,string s);
+    Ambassador(Game& ,string s);
     void income();
     void foreign_aid();
     int coins();

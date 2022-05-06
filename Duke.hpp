@@ -4,10 +4,12 @@
 //class Player;
 class Game;
 using namespace std;
+using namespace coup;
+
 class Duke :public Player
 {
   public:
-    Duke(coup::Game& ,string s);
+    Duke(Game& ,string s);
     void income();
     void foreign_aid();
     int coins();

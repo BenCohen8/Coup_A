@@ -1,10 +1,11 @@
 #include <iostream>
 #include "Player.hpp"
 class Game;
+using namespace coup;
 class Captain:public Player
 {
   public:
-    Captain(coup::Game& ,string s);
+    Captain(Game& ,string s);
     void income();
     void foreign_aid();
     int coins(){

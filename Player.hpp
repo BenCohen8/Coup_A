@@ -2,13 +2,12 @@
 #pragma once
 #include "Game.hpp"
 using namespace std;
-
+namespace coup{
     class Player
     {
     string _role;
     string _name;
     int _coins;
-    //coup::Game _G;
     public:
     void income();
     void foreign_aid();   
@@ -31,3 +30,4 @@ using namespace std;
     Player getPlayer(){return *this;}
     };
 
+}

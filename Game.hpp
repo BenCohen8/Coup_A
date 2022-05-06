@@ -4,19 +4,18 @@
 
 #include "Player.hpp"
 using namespace std;
-namespace coup
-{
+//namespace coup
+//{
 
-    class Game
+    struct Game
     { 
         private:
         vector<string> playerslist;
         public:
-        Game();
         vector<string> players();
         string turn();
         void addPlayer(string G );
-        
+        Game();
         void removePlayer(string p);
         vector<string> getList(){return this->playerslist;} 
         void setList(vector<string> s){this->playerslist=s;};
@@ -25,4 +24,5 @@ namespace coup
 
         
     };
-}
+
+//}

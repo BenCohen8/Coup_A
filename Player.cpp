@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Player.hpp"
+using namespace coup;
     void Player::income()
     {
 

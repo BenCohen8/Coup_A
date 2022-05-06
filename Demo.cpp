@@ -13,6 +13,7 @@
 #include "Contessa.hpp"
 #include "Game.hpp"
 
+#include <exception>
 
 using namespace coup;
 
@@ -23,7 +24,7 @@ using namespace std;
 
 int main() {
 
-	coup::Game game_1{};
+	Game game_1{};
 
 	/* This player drew the "Duke" card, his name is Moshe
 	and he is a player in game_1 */
@@ -58,23 +59,34 @@ int main() {
 	contessa.income();
 
 	// throws exception, it is duke's turn now
-	assassin.income();
-
+	try{
+		assassin.income();
+	}catch (const std::exception &e){
+		std::cerr << e.what() << '\n';
+	}
 	duke.income();
 	assassin.foreign_aid();
 
 	// throws exception, the last operation duke performed
 	// is income, which cannot be blocked by any role
-	captain.block(duke);
+	try{
+		captain.block(duke);
+	}catch (const std::exception &e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 
 	cout << duke.coins() << endl; // prints 2
 	cout << assassin.coins() << endl; // prints 3
-	try{
-	// throws exception, the last operation duke performed
+
+	// throws exception, the last operation assassin performed
 	// is foreign aid, which cannot be blocked by contessa
-	contessa.block(assassin);
+	try{
+		contessa.block(assassin);
+	}catch (const std::exception &e)
+	{
+		std::cerr << e.what() << '\n';
 	}
-	catch(exception e){};//cout<<e<<endl;}
 
 	duke.block(assassin);
 	cout << assassin.coins() << endl; // prints 1
@@ -111,6 +123,7 @@ int main() {
 	players = game_1.players();
 	/*
 		prints:
+		Moshe
 		Yossi
 		Meirav
 		Reut
@@ -120,6 +133,4 @@ int main() {
 	{
 		cout << name << endl;
 	}
-	
 }
-

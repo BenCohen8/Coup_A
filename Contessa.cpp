@@ -2,8 +2,8 @@
 #include "Contessa.hpp"
 #include "Player.hpp"
 #include "Game.hpp"
-
-  Contessa::Contessa(coup::Game& g,string s)
+using namespace coup;
+  Contessa::Contessa(Game& g,string s)
   {
      this->setName(s);
      this->setcoins(0);

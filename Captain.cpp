@@ -3,7 +3,7 @@
 #include "Player.hpp"
 #include "Game.hpp"
 
-  Captain::Captain(coup::Game& g,string s)
+  Captain::Captain(Game& g,string s)
   {
     this->setName(s);
      this->setcoins(0);

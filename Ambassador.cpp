@@ -3,7 +3,7 @@
 #include "Player.hpp"
 #include "Game.hpp"
 
-  Ambassador::Ambassador(coup::Game& g,string s)
+  Ambassador::Ambassador(Game& g,string s)
   {
     this->setName(s);
      this->setcoins(0);

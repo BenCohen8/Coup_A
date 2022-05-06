@@ -12,7 +12,7 @@ using namespace coup;
 
 TEST_CASE("Good input")
 {
-    coup::Game game{};
+    Game game{};
    Assassin ass{game,"B"};
    Ambassador amb{game,"A"};
     Captain cap{game,"C"};
@@ -46,7 +46,7 @@ TEST_CASE("Good input")
 }
 TEST_CASE("Bad input")
 {
-    coup::Game game{};
+    Game game{};
     Assassin ass{game,"B"};
     Ambassador amb{game,"A"};
     Captain cap{game,"C"};

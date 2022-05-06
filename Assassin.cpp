@@ -3,7 +3,7 @@
 #include "Player.hpp"
 #include "Game.hpp"
 
-  Assassin::Assassin(coup::Game& g,string s)
+  Assassin::Assassin(Game& g,string s)
   {
          this->setName(s);
      this->setcoins(0);
